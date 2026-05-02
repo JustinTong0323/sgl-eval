@@ -25,7 +25,9 @@ sgl_eval/_vendored/nemo_skills/dataset/mmlu/test.jsonl
 sgl_eval/_vendored/nemo_skills/dataset/mmlu/data.tar
 sgl_eval/_vendored/nemo_skills/dataset/gpqa/*.jsonl
 
-# Local preset configs. Contain real cluster paths / endpoints, so never
-# committed. Staged in this folder so rdev sync / lsync ferries them to the
-# remote machine; from there manually `cp presets/*.yaml ~/.sgl_eval/presets/`.
-/presets/
+# Local preset configs. ``preset_config`` is a symlink to
+# ``~/.sgl_eval/presets/`` -- single source of truth, edited there directly.
+# Symlinked into the repo only so a git checkout sees the preset folder for
+# convenience; never committed because the yamls inside contain real cluster
+# paths / endpoints.
+/preset_config
